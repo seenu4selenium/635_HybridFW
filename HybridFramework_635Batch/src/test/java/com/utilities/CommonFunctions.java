@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -225,6 +227,72 @@ public class CommonFunctions {
 		driver.switchTo().window(parentWindow);
 	}
 	
+	
+	/************** Alert Handle *************************/
+	public void alertHandleByAccept() {
+		Alert alert = driver.switchTo().alert();
+		String alertText = alert.getText();
+		System.out.println("Alert text is: " + alertText);
+		alert.accept();
+
+	}
+
+	public void alertHandleByDismiss() {
+		Alert alert = driver.switchTo().alert();
+		String alertText = alert.getText();
+		System.out.println("Alert text is: " + alertText);
+		alert.dismiss();
+	}
+
+	/************
+	 * popupHandle
+	 * 
+	 * @throws InterruptedException
+	 *********************************/
+	public void popupHandleToCloseChildWindow() throws InterruptedException {
+		// get the main windown name
+		String mainWindowName = driver.getWindowHandle();
+		System.out.println("mainWindowName:" + mainWindowName);
+
+		Set<String> allWindowNames = driver.getWindowHandles();// 4
+		System.out.println("allWindowNames:" + allWindowNames);
+
+		// Close the child window (popups)
+		// for (int i = 0; i < array.length; i++) { }
+		for (String string : allWindowNames) {
+			// validate the window name is parent window /Child window?
+			if (!mainWindowName.equals(string)) {
+				// switch to child window
+				driver.switchTo().window(string);
+				Thread.sleep(3000);
+				// Close my child window
+				driver.close();
+			}
+		}
+		// move cursor point to back to mainwindow
+		driver.switchTo().window(mainWindowName);
+	}
+
+	public void navigateToPopupWindow() throws InterruptedException {
+		// get the main windown name
+		String mainWindowName = driver.getWindowHandle();
+		System.out.println("mainWindowName:" + mainWindowName);
+
+		Set<String> allWindowNames = driver.getWindowHandles();// 4
+		System.out.println("allWindowNames:" + allWindowNames);
+
+		// Close the child window (popups)
+		// for (int i = 0; i < array.length; i++) { }
+		for (String string : allWindowNames) {
+			// validate the window name is parent window /Child window?
+			if (!mainWindowName.equals(string)) {
+				// switch to child window
+				driver.switchTo().window(string);
+				Thread.sleep(3000);
+			}
+		}
+
+	}
 	
 	
 	

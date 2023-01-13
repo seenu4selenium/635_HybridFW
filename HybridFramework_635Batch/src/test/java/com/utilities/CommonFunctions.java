@@ -14,13 +14,16 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -138,6 +141,7 @@ public class CommonFunctions {
 		} else {
 			System.out.println("Given locator is not displayed on DOM(Current page***");
 		}
+		implicitWait(3);
 	}
 
 	public void clickUsingJavaScript(By locator) throws Exception {
@@ -293,6 +297,76 @@ public class CommonFunctions {
 		}
 
 	}
+	/*************************  Actions Functions ************/
+
+	public void moveToOnElement(By locator) {
+		try {
+			WebElement element = driver.findElement(locator);
+			Actions actions = new Actions(driver);
+			actions.moveToElement(element);
+			actions.click().build().perform();
+		} catch (Exception e) {
+			System.out.println("Error in description: " + e.getStackTrace());
+		}
+	}
+
+	public void mouseHoverClickandHold(By locator) {
+		try {
+			WebElement element = driver.findElement(locator);
+			Actions actions = new Actions(driver);
+			actions.clickAndHold(element);
+			actions.click().build().perform();
+		} catch (Exception e) {
+			System.out.println("Error in description: " + e.getStackTrace());
+		}
+
+	}
+	//Right click
+	public void mouseHoverContextClick(By locator) {
+		try {
+			WebElement element = driver.findElement(locator);
+			Actions actions = new Actions(driver);
+			actions.contextClick(element).perform();
+		} catch (Exception e) {
+			System.out.println("Error in description: " + e.getStackTrace());
+		}
+
+	}
+
+	public void doubleClick(By locator) {
+		try {
+			WebElement element = driver.findElement(locator);
+			Actions actions = new Actions(driver);
+			actions.doubleClick(element).perform();
+		} catch (Exception e) {
+			System.out.println("Error in description: " + e.getStackTrace());
+		}
+
+	}
+
+	public void dragandDrop(By sourceelementLocator, By destinationelementLocator) {
+		try {
+			WebElement sourceElement = driver.findElement(sourceelementLocator);
+			WebElement destinationElement = driver.findElement(destinationelementLocator);
+
+			if (sourceElement.isDisplayed() && destinationElement.isDisplayed()) {
+				Actions action = new Actions(driver);
+				action.dragAndDrop(sourceElement, destinationElement).build().perform();
+			} else {
+				System.out.println("Element(s) was not displayed to drag / drop");
+			}
+		} catch (StaleElementReferenceException e) {
+			System.out.println("Element with " + sourceelementLocator + "or" + destinationelementLocator
+					+ "is not attached to the page document " + e.getStackTrace());
+		} catch (NoSuchElementException e) {
+			System.out.println("Element " + sourceelementLocator + "or" + destinationelementLocator
+					+ " was not found in DOM " + e.getStackTrace());
+		} catch (Exception e) {
+			System.out.println("Error occurred while performing drag and drop operation " + e.getStackTrace());
+		}
+	}
+	
+	
 	
 	
 	

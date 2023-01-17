@@ -2,28 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-13T17:31:28 CST" name="Default suite" finished-at="2023-01-13T17:31:34 CST" duration-ms="5566">
+  <suite started-at="2023-01-16T17:54:32 CST" name="Default suite" finished-at="2023-01-16T17:54:33 CST" duration-ms="729">
     <groups>
     </groups>
-    <test started-at="2023-01-13T17:31:28 CST" name="Default test" finished-at="2023-01-13T17:31:34 CST" duration-ms="5566">
-      <class name="com.testscenarios.ActionsSample">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.testscenarios.ActionsSample@57a78e3]" started-at="2023-01-13T17:31:28 CST" name="beforeClass" finished-at="2023-01-13T17:31:30 CST" duration-ms="1740" status="PASS">
+    <test started-at="2023-01-16T17:54:32 CST" name="Default test" finished-at="2023-01-16T17:54:33 CST" duration-ms="729">
+      <class name="dataDrivenFramework.WriteDataToExceSheet">
+        <test-method signature="f()[pri:0, instance:dataDrivenFramework.WriteDataToExceSheet@4659191b]" started-at="2023-01-16T17:54:32 CST" name="f" finished-at="2023-01-16T17:54:33 CST" duration-ms="698" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="tc02()[pri:0, instance:com.testscenarios.ActionsSample@57a78e3]" started-at="2023-01-13T17:31:30 CST" name="tc02" finished-at="2023-01-13T17:31:34 CST" duration-ms="3488" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc02 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testscenarios.ActionsSample@57a78e3]" started-at="2023-01-13T17:31:34 CST" name="afterMethod" finished-at="2023-01-13T17:31:34 CST" duration-ms="179" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.testscenarios.ActionsSample@57a78e3]" started-at="2023-01-13T17:31:34 CST" name="afterClass" finished-at="2023-01-13T17:31:34 CST" duration-ms="129" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.testscenarios.ActionsSample -->
+        </test-method> <!-- f -->
+      </class> <!-- dataDrivenFramework.WriteDataToExceSheet -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

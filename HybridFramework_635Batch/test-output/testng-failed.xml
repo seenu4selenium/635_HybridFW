@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dataDrivenFramework.WriteDataToExceSheet">
+      <class name="dataDrivenFramework.OrangeHRMPAgeLogin">
         <methods>
-          <include name="f"/>
+          <include name="beforeClass"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- dataDrivenFramework.WriteDataToExceSheet -->
+      </class> <!-- dataDrivenFramework.OrangeHRMPAgeLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

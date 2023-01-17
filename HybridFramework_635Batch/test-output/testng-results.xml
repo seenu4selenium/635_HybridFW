@@ -2,16 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-16T17:54:32 CST" name="Default suite" finished-at="2023-01-16T17:54:33 CST" duration-ms="729">
+  <suite started-at="2023-01-17T17:30:36 CST" name="Default suite" finished-at="2023-01-17T17:32:02 CST" duration-ms="86490">
     <groups>
     </groups>
-    <test started-at="2023-01-16T17:54:32 CST" name="Default test" finished-at="2023-01-16T17:54:33 CST" duration-ms="729">
-      <class name="dataDrivenFramework.WriteDataToExceSheet">
-        <test-method signature="f()[pri:0, instance:dataDrivenFramework.WriteDataToExceSheet@4659191b]" started-at="2023-01-16T17:54:32 CST" name="f" finished-at="2023-01-16T17:54:33 CST" duration-ms="698" status="PASS">
+    <test started-at="2023-01-17T17:30:36 CST" name="Default test" finished-at="2023-01-17T17:32:02 CST" duration-ms="86490">
+      <class name="dataDrivenFramework.FbLoginTest">
+        <test-method is-config="true" signature="url()[pri:0, instance:dataDrivenFramework.FbLoginTest@451001e5]" started-at="2023-01-17T17:30:36 CST" name="url" finished-at="2023-01-17T17:30:39 CST" duration-ms="2675" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- dataDrivenFramework.WriteDataToExceSheet -->
+        </test-method> <!-- url -->
+        <test-method signature="fblogin()[pri:0, instance:dataDrivenFramework.FbLoginTest@451001e5]" started-at="2023-01-17T17:30:39 CST" name="fblogin" finished-at="2023-01-17T17:32:02 CST" duration-ms="83784" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fblogin -->
+      </class> <!-- dataDrivenFramework.FbLoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

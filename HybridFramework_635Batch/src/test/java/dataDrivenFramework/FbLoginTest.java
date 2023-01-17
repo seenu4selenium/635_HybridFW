@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import com.utilities.CommonFunctions;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -54,8 +55,13 @@ public class FbLoginTest extends CommonFunctions {
 
 			}
 			System.out.println(results);
-
+			Cell abc = r.createCell(2);
+			abc.setCellValue(results);
+			Thread.sleep(3000);
 		}
+		FileOutputStream fo = new FileOutputStream("./src/test/resources/testdata/TD.xlsx");
+		wb.write(fo);
+		wb.close();
 	}
 
 }

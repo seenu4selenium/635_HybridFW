@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dataDrivenFramework.OrangeHRMPAgeLogin">
+      <class name="com.testscenarios.ActionsSample">
         <methods>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="login"/>
+          <include name="tc02"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- dataDrivenFramework.OrangeHRMPAgeLogin -->
+      </class> <!-- com.testscenarios.ActionsSample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

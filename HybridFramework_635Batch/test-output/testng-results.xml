@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-17T17:30:36 CST" name="Default suite" finished-at="2023-01-17T17:32:02 CST" duration-ms="86490">
+  <suite started-at="2023-01-19T17:56:25 CST" name="Suite" finished-at="2023-01-19T17:57:00 CST" duration-ms="35085">
     <groups>
     </groups>
-    <test started-at="2023-01-17T17:30:36 CST" name="Default test" finished-at="2023-01-17T17:32:02 CST" duration-ms="86490">
-      <class name="dataDrivenFramework.FbLoginTest">
-        <test-method is-config="true" signature="url()[pri:0, instance:dataDrivenFramework.FbLoginTest@451001e5]" started-at="2023-01-17T17:30:36 CST" name="url" finished-at="2023-01-17T17:30:39 CST" duration-ms="2675" status="PASS">
+    <test started-at="2023-01-19T17:56:25 CST" name="Test" finished-at="2023-01-19T17:57:00 CST" duration-ms="35085">
+      <class name="com.testscenarios.PopupHandle">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.testscenarios.PopupHandle@1033576a]" started-at="2023-01-19T17:56:51 CST" name="beforeClass" finished-at="2023-01-19T17:56:52 CST" duration-ms="1003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="f()[pri:0, instance:com.testscenarios.PopupHandle@1033576a]" started-at="2023-01-19T17:56:52 CST" name="f" finished-at="2023-01-19T17:57:00 CST" duration-ms="7471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testscenarios.PopupHandle@1033576a]" started-at="2023-01-19T17:57:00 CST" name="afterMethod" finished-at="2023-01-19T17:57:00 CST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.testscenarios.PopupHandle@1033576a]" started-at="2023-01-19T17:57:00 CST" name="afterClass" finished-at="2023-01-19T17:57:00 CST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.testscenarios.PopupHandle -->
+      <class name="com.testscenarios.FB_Login">
+        <test-method is-config="true" signature="url()[pri:0, instance:com.testscenarios.FB_Login@24569dba]" started-at="2023-01-19T17:56:25 CST" name="url" finished-at="2023-01-19T17:56:34 CST" duration-ms="9346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- url -->
-        <test-method signature="fblogin()[pri:0, instance:dataDrivenFramework.FbLoginTest@451001e5]" started-at="2023-01-17T17:30:39 CST" name="fblogin" finished-at="2023-01-17T17:32:02 CST" duration-ms="83784" status="PASS">
+        <test-method signature="f()[pri:0, instance:com.testscenarios.FB_Login@24569dba]" started-at="2023-01-19T17:56:34 CST" name="f" finished-at="2023-01-19T17:56:51 CST" duration-ms="16468" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fblogin -->
-      </class> <!-- dataDrivenFramework.FbLoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.testscenarios.FB_Login@24569dba]" started-at="2023-01-19T17:56:51 CST" name="afterMethod" finished-at="2023-01-19T17:56:51 CST" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.testscenarios.FB_Login@24569dba]" started-at="2023-01-19T17:56:51 CST" name="afterClass" finished-at="2023-01-19T17:56:51 CST" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.testscenarios.FB_Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
